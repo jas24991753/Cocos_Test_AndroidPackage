@@ -1,0 +1,24 @@
+{
+  "appKey": "",
+  "appSecret": "",
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "inlineSpriteFrames": true,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.AndroidTestProject",
+  "privateKey": "",
+  "renderMode": "0",
+  "startScene": "478269c2-1949-4a1e-9142-1e94298da3a6",
+  "title": "AndroidTestProject",
+  "webOrientation": "auto"
+}
