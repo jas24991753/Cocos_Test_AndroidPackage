@@ -23,7 +23,12 @@ cc.Class({
     update: function (dt) {
         // 
         
-        this.countLabel.string = cc.game.gameModel.contentNumber;
+        this.countLabel.string = cc.game.mainModel.contentNumber;
+
+        if(cc.game.mainModel.changeGameSences){
+            cc.game.mainModel.changeGameSences=false;
+            cc.director.loadScene('game');
+        }
     },
 
     check_plugin:function(){

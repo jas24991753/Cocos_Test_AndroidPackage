@@ -24,11 +24,26 @@ cc.Class({
 
     // },
 
-    onButtonClick:function(){
-        cc.game.gameModel.contentNumber++ ;
-        cc.game.gameModel.slotIsSpin = true;
+    onButtonClick:function(e){
+         cc.log(e.target.name);
+        switch(e.target.name){
+            case "PushButton":
+                cc.game.mainModel.contentNumber++ ;
+                cc.game.mainModel.slotIsSpin = true;
+                break;
+            case "ShowBannerButton":
 
-        // cc.game.reelState.spin();
-        // cc.log('按下',cc.game.gameModel.contentNumber)
+                break;
+            case "HideBannerButton":
+
+                break;
+            case "ChangeGameButton":
+                cc.game.mainModel.changeGameSences =true;
+
+                cc.log(cc.game.mainModel.changeGameSences);
+                break;
+        }
+        
+
     },
 });
