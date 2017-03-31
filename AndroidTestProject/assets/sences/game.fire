@@ -99,13 +99,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 40
+        "__id__": 44
       },
       {
-        "__id__": 41
+        "__id__": 45
       },
       {
-        "__id__": 42
+        "__id__": 46
       }
     ],
     "_prefab": null,
@@ -382,6 +382,7 @@
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "Player4",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -597,6 +598,7 @@
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "Player3",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -812,6 +814,7 @@
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "Player2",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -1027,6 +1030,7 @@
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "Player1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -1242,6 +1246,7 @@
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "回主畫面",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -1470,6 +1475,7 @@
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "開始/停止",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -1574,7 +1580,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "PokerMediators",
+    "_name": "PokerMed",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -1595,14 +1601,18 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 117,
-      "height": 160
+      "width": 0,
+      "height": 0
     },
-    "_children": [],
+    "_children": [
+      {
+        "__id__": 39
+      }
+    ],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1.5,
-    "_scaleY": 1.5,
+    "_scaleX": 1,
+    "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -1614,11 +1624,119 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "a0ad4rlPGREqL+adXWWWsLK",
+    "_id": "4218951TRZN24cqabmnEx1X",
     "_active": true,
     "_components": [
       {
-        "__id__": 39
+        "__id__": 43
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Poker",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 38
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [
+      {
+        "__id__": 40
+      }
+    ],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "c9207OKLk5OUbxky2xr95N8",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 42
+      }
+    ],
+    "_prefab": null,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ShowCard",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 39
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "eb10b81My9KbYUaGLw0aqEC",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 41
       }
     ],
     "_prefab": null,
@@ -1629,12 +1747,10 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 38
+      "__id__": 40
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "91e8c460-41aa-4a2f-bed3-f7a60ec475a5"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -1649,6 +1765,243 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
+  },
+  {
+    "__type__": "b2f18HpillMgaeSjiY0qUsC",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 39
+    },
+    "_enabled": true,
+    "_pokerID": "600",
+    "_pokerIndex": 0,
+    "_pokerSpriteNode": null,
+    "pokerLabel": [
+      "600",
+      "214",
+      "215",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "114",
+      "115",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "414",
+      "415",
+      "403",
+      "404",
+      "405",
+      "406",
+      "407",
+      "408",
+      "409",
+      "410",
+      "411",
+      "412",
+      "413",
+      "314",
+      "315",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313"
+    ],
+    "pokerShow": [
+      {
+        "__uuid__": "91e8c460-41aa-4a2f-bed3-f7a60ec475a5"
+      },
+      {
+        "__uuid__": "55b21991-c166-4f25-9cb5-d75274e80410"
+      },
+      {
+        "__uuid__": "b27c1996-1592-45c0-a1e4-ff4ad540f227"
+      },
+      {
+        "__uuid__": "d9eefc2b-8ed9-417d-b085-7c7eb8be9b25"
+      },
+      {
+        "__uuid__": "16e6665f-1ef2-480b-bb63-469cdc7c417d"
+      },
+      {
+        "__uuid__": "0493c93d-b4cd-475f-b7dc-de8ae9ecd703"
+      },
+      {
+        "__uuid__": "5bd0dd00-8e19-4c21-b398-9b3bc0dfbe1b"
+      },
+      {
+        "__uuid__": "cc1b0ade-ba8d-4bba-8359-38344a63b360"
+      },
+      {
+        "__uuid__": "bdf1fa84-2ed9-464c-b78f-1d2085e1c145"
+      },
+      {
+        "__uuid__": "67822c92-11d0-414b-8131-12e1af39318f"
+      },
+      {
+        "__uuid__": "6b872e1c-244f-4662-95cd-bd9369ab05a8"
+      },
+      {
+        "__uuid__": "a592ec83-c6fd-4808-8da0-b1d1c5d6ded3"
+      },
+      {
+        "__uuid__": "1b570835-f43c-4c61-9496-c0927138c9c1"
+      },
+      {
+        "__uuid__": "b4c5a484-43c7-4de5-bd39-673c18ab1ab9"
+      },
+      {
+        "__uuid__": "d9b00d99-ab5c-40cc-baf4-8145d0392ffd"
+      },
+      {
+        "__uuid__": "1fc063db-3161-45ab-b372-f9d74268ed10"
+      },
+      {
+        "__uuid__": "6a755ffd-6a04-4391-a033-900f47d08483"
+      },
+      {
+        "__uuid__": "4ead1fc9-a06b-40de-90d0-139a526499b0"
+      },
+      {
+        "__uuid__": "c1966807-1d85-4238-b7f5-7d7be7f44521"
+      },
+      {
+        "__uuid__": "716dd81e-72d5-4a2b-9b20-b444d298d47b"
+      },
+      {
+        "__uuid__": "38ae7b51-a0d5-480c-bb06-e75095bfc2ea"
+      },
+      {
+        "__uuid__": "38ae7b51-a0d5-480c-bb06-e75095bfc2ea"
+      },
+      {
+        "__uuid__": "12eb6202-2c8b-4659-a1a6-f3bf454c0057"
+      },
+      {
+        "__uuid__": "120bda23-193c-49db-8bd2-ec98557d5add"
+      },
+      {
+        "__uuid__": "f719a4e7-2711-48d3-9098-7b2deae34790"
+      },
+      {
+        "__uuid__": "f35df407-8b8f-4a68-896b-a8d1e9f09f4e"
+      },
+      {
+        "__uuid__": "00bd4c20-15f1-4b29-966a-48224501600a"
+      },
+      {
+        "__uuid__": "3e6de2e6-a80a-4aa9-9202-d24b534d4d36"
+      },
+      {
+        "__uuid__": "0267ae0d-498c-4fa6-a11b-3a71a2218c8a"
+      },
+      {
+        "__uuid__": "469127d8-2e87-4822-ab54-ffb80db9b134"
+      },
+      {
+        "__uuid__": "9d113d91-570e-4fce-a5e4-bcfc524afac0"
+      },
+      {
+        "__uuid__": "9f69d55a-511e-4409-a2f1-47e60eb47627"
+      },
+      {
+        "__uuid__": "11cf0b22-e807-4bb8-bd96-08257f294382"
+      },
+      {
+        "__uuid__": "1e5044c3-cc08-47a5-9bed-216df33ff865"
+      },
+      {
+        "__uuid__": "c4870507-4787-46a9-ab60-cd50a5ce5502"
+      },
+      {
+        "__uuid__": "f23fc776-0adb-4455-b8a5-06cb78edefe8"
+      },
+      {
+        "__uuid__": "a1607f17-6f07-4f37-8c49-b1d408da339f"
+      },
+      {
+        "__uuid__": "7cb30992-e634-484f-b9b6-6e963714738c"
+      },
+      {
+        "__uuid__": "9dc445b9-7064-4a97-9e9a-534e715c7d49"
+      },
+      {
+        "__uuid__": "f50d7ae4-349e-43dc-8bce-bc5f76fce211"
+      },
+      {
+        "__uuid__": "63d74dd6-42c2-46b1-9145-8d9d9dda93b2"
+      },
+      {
+        "__uuid__": "86b8b0e0-db19-46c5-b948-58eeb94018aa"
+      },
+      {
+        "__uuid__": "70bac498-5674-4306-82d4-43dd9c69e6cd"
+      },
+      {
+        "__uuid__": "05619ce9-8fc5-4749-a173-81bc3d18cdac"
+      },
+      {
+        "__uuid__": "b1c9db3f-54db-47a4-bd44-077d1fb15e17"
+      },
+      {
+        "__uuid__": "6445c0f5-8f9a-40e2-adc6-c7ac50e3f5f9"
+      },
+      {
+        "__uuid__": "0f7fb381-eb47-4807-8399-537358f34c56"
+      },
+      {
+        "__uuid__": "5470c36b-d568-474d-8a74-d9343b3a2e3e"
+      },
+      {
+        "__uuid__": "9b1a1a18-5c16-488f-8c3a-2f17043d12c8"
+      },
+      {
+        "__uuid__": "b42d52d3-35d4-4754-bfb6-061e31a0c65b"
+      },
+      {
+        "__uuid__": "5dfb3bb8-358e-41ba-aef7-f18dd442fb8e"
+      },
+      {
+        "__uuid__": "0580ba2a-47c5-4d78-9992-2125970c8da2"
+      },
+      {
+        "__uuid__": "df87a01f-6fc4-442f-af9e-e2d96dda6f80"
+      }
+    ]
+  },
+  {
+    "__type__": "efb1fWyz1lLfpC6EvrRkxZ/",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 38
+    },
+    "_enabled": true
   },
   {
     "__type__": "cc.Canvas",
