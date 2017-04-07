@@ -126,9 +126,9 @@ var SlotReel = cc.Class({
             onCompleteScope: this
         });
 
-        this.scheduleOnce(function () {
-            this.stopSpin();
-        }, 1.5);
+        // this.scheduleOnce(function () {
+        //     this.stopSpin();
+        // }, 1.5);
     },
 
     stopSpin: function () {

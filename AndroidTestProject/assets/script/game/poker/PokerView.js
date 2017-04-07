@@ -10,7 +10,7 @@ cc.Class({
             set:function(value){
                 this._pokerID = value;
                 this._pokerIndex = this.pokerLabel.indexOf(this._pokerID);
-                cc.log("ID _pokerIndex",this._pokerIndex);
+                // cc.log("ID _pokerIndex",this._pokerIndex);
                 this._updatePoker(); 
             }
         },
@@ -23,6 +23,7 @@ cc.Class({
             set:function(value){
                 this._pokerIndex = value;
                 this._pokerID = this.pokerLabel[this._pokerIndex];
+				// cc.log("Index _pokerID",this._pokerID);
                 this._updatePoker();
             }
         },
@@ -60,7 +61,7 @@ cc.Class({
         let sprite = this._pokerSpriteNode.getComponent(cc.Sprite);
 
         sprite.spriteFrame = this.pokerShow[this._pokerIndex];
-        cc.log("更新 ",sprite);
+        // cc.log("更新 ",sprite);
     }
     
 });
