@@ -8,7 +8,8 @@ cc.Class({
         adMobLabel:{
             default:null,
             type:cc.Label,
-        }
+        },
+        msg:cc.Label,
 
     },
 
@@ -21,8 +22,7 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-        // 
-        
+        //        
         this.countLabel.string = cc.game.mainModel.contentNumber;
 
         if(cc.game.mainModel.changeGameSences){
@@ -94,28 +94,32 @@ cc.Class({
         sdkbox.PluginAdMob.init();
 
         // just for test
-        let plugin = sdkbox.PluginAdMob
-        if ("undefined" != typeof(plugin.deviceid) && plugin.deviceid.length > 0) {
-            this.showInfo('deviceid=' + plugin.deviceid);
-            // plugin.setTestDevices(plugin.deviceid);
-        }
+        // let plugin = sdkbox.PluginAdMob
+        // if ("undefined" != typeof(plugin.deviceid) && plugin.deviceid.length > 0) {
+        //     this.showInfo('deviceid=' + plugin.deviceid);
+        //     // plugin.setTestDevices(plugin.deviceid);
+        // }
 
     },
 
     showBanner: function(){
+        this.msg.string = 'show';
         if(!this.check_plugin()){
             return
         }
 
         sdkbox.PluginAdMob.show('home');
+       
     },
 
     hideBanner: function(){
+        this.msg.string = 'hide';
         if(!this.check_plugin()){
             return
         }
 
         sdkbox.PluginAdMob.hide('home');
+        
 
 
     },

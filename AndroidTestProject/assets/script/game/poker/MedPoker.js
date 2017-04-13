@@ -1,3 +1,4 @@
+const Audio =require('Audio');
 const PokerView = require("PokerView")
 var MedPoker = cc.Class({
     extends: cc.Component,
@@ -58,21 +59,22 @@ var MedPoker = cc.Class({
         this._washLabel.unshift('600');
     },
 
-    showPoker:function(){
+    startShowPoker:function(){
 
         this.index = 0;
         this.nowIndex = 0;
+        let n = 0;
         for(var i =0; i<this._washLabel.length;i++){
             this.node.runAction(
                 cc.sequence(
-                    cc.delayTime(i*(2*Math.random())),
+                    cc.delayTime(i*2+(n+=Math.random())),
                     cc.callFunc(function () {                    
                         
                         if(this.index>0 &&this.nowIndex%14 == 0) this.nowIndex = 1;
                         cc.game.gameModel.nowID = this.nowIndex++;
                         this._pokerView.pokerID=this._washLabel[this.index++];
                         cc.game.gameModel.pokerID = this._pokerView.pokerID;
-
+                        this.audioPlay(cc.game.gameModel.nowID);
                     }, this)
                     
                 )
@@ -83,6 +85,14 @@ var MedPoker = cc.Class({
 
     },
 
+    audioPlay:function(num){
+        let name ='poker'+num.toString();
+
+        Audio.playSound(name);
+
+
+    },
+
     toggleStart:function(){
 
         if(this.isDeal){
@@ -90,7 +100,8 @@ var MedPoker = cc.Class({
             this.node.stopAllActions();
         }else{
             this.isDeal = true
-            this.showPoker();
+            cc.game.gameModel.resetAllPoint();
+            this.startShowPoker();
         }
 
     }

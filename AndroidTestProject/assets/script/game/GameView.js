@@ -1,3 +1,4 @@
+const Audio =require('Audio');
 cc.Class({
     extends: cc.Component,
 
@@ -17,20 +18,25 @@ cc.Class({
 
     },
 
+   
+
     
     update: function (dt) {
-         if(cc.game.gameModel.changeMainSences){
+        
+        if(cc.game.gameModel.changeMainSences){
             cc.game.gameModel.changeMainSences=false;
             cc.director.loadScene('main');
         }
-
+        
         if(this.pokerIDView){
             this.pokerIDView.string = cc.game.gameModel.pokerID
         }
        
-        if(this.nowIDView){
-            this.nowIDView.string = cc.game.gameModel.nowID
+        if(this.nowIDView){            
+            this.nowIDView.string = cc.game.gameModel.nowID   
+            
         }
+        
 
          if(this.checkView){
             if(cc.game.gameModel.isAllowClick){
@@ -57,4 +63,9 @@ cc.Class({
 
 
     },
+
+   
+
+
+
 });
