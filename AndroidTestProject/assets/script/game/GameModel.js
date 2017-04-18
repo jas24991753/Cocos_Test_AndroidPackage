@@ -72,12 +72,23 @@ var GameModel =cc.Class({
                 case 4:
                     this.point4 ++
                     break;
-
             }
 
-            
-
-            
+        }else{
+             switch(num){
+                case 1:
+                    this.point1 --
+                    break;
+                case 2:
+                    this.point2 --
+                    break;
+                case 3:
+                    this.point3 --
+                    break;
+                case 4:
+                    this.point4 --
+                    break;
+             }
         }
 
     }

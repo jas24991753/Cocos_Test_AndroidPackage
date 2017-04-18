@@ -11,6 +11,10 @@ var MedPoker = cc.Class({
 
         _pokerView:cc.Node,
 
+        _twoPokerArray:[cc.String],
+
+        _finalArray:[cc.String],
+
         isDeal:false,
 
         index:0,
@@ -23,23 +27,25 @@ var MedPoker = cc.Class({
         
         this._pokerView =this.node.getComponentInChildren("PokerView");
         
-        this._pokerLabel = this._pokerView.pokerLabel;
+        this._twoPokerArray=this._pokerView.pokerLabel.slice(1,this._pokerView.pokerLabel.length);        
+
+        this._pokerLabel = this._pokerView.pokerLabel;         
+
+        this._finalArray = this._pokerLabel.concat(this._twoPokerArray);
+
+        // cc.log(this._finalArray);
         
+
         this.washPoker();
 
-        // this._pokerView.pokerID = '112';
-        // this.showPoker();
+       
     },
 
     
     update: function (dt) {
         
-        // this._pokerView.pokerID = '215';
-        // if(this.isDeal){
-
-
-        // }
-
+        
+        
     },
 
     shuffle:function(card){
@@ -55,7 +61,7 @@ var MedPoker = cc.Class({
 
     //洗牌
     washPoker:function(){
-        this._washLabel = this.shuffle(this._pokerLabel.slice(1,this._pokerLabel.length));
+        this._washLabel = this.shuffle(this._finalArray.slice(1,this._finalArray.length));
         this._washLabel.unshift('600');
     },
 
@@ -67,7 +73,7 @@ var MedPoker = cc.Class({
         for(var i =0; i<this._washLabel.length;i++){
             this.node.runAction(
                 cc.sequence(
-                    cc.delayTime(i*2+(n+=Math.random())),
+                    cc.delayTime(i*1.5+(n+=Math.random())),
                     cc.callFunc(function () {                    
                         
                         if(this.index>0 &&this.nowIndex%14 == 0) this.nowIndex = 1;
@@ -101,6 +107,7 @@ var MedPoker = cc.Class({
         }else{
             this.isDeal = true
             cc.game.gameModel.resetAllPoint();
+            this.washPoker();
             this.startShowPoker();
         }
 
